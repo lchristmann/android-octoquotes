@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/mainPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/upButtonSettings"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/mainPurple"
+            android:contentDescription="@string/up_button_content_description"
+            android:onClick="onUpButtonClickSettings"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/x53_arrow_snow" />
+
+        <TextView
+            android:id="@+id/SettingsActivityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/fixedWhite"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        android:background="@color/backgroundColor">
+
+        <TextView
+            android:id="@+id/themeSettingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/theme_settings_text"
+            android:textAllCaps="true"
+            android:textColor="@color/foregroundColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/themeRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/themeSettingsTextView">
+
+            <RadioButton
+                android:id="@+id/lightThemeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/theme_light_radio_button_text"
+                android:textColor="@color/foregroundColor"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/darkThemeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:checked="true"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/theme_dark_radio_button_text"
+                android:textColor="@color/foregroundColor" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/copySettingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/copy_quote_button_content_description"
+            android:textAllCaps="true"
+            android:textColor="@color/foregroundColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/themeRadioGroup" />
+
+        <RadioGroup
+            android:id="@+id/copyRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/copySettingsTextView">
+
+            <RadioButton
+                android:id="@+id/copyWithoutAuthorRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:checked="true"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/without_author_radio_button_text"
+                android:textColor="@color/foregroundColor"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/copyWithAuthorRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/with_author_radio_button_text"
+                android:textColor="@color/foregroundColor" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/listsShuffleSettingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/shuffle_settings_text"
+            android:textAllCaps="true"
+            android:textColor="@color/foregroundColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/copyRadioGroup" />
+
+        <RadioGroup
+            android:id="@+id/shuffleRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listsShuffleSettingsTextView">
+
+            <RadioButton
+                android:id="@+id/noShuffleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:checked="true"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/no_shuffle_radio_button_text"
+                android:textColor="@color/foregroundColor"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/yesShuffleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainPurple"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/yes_shuffle_radio_button_text"
+                android:textColor="@color/foregroundColor" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

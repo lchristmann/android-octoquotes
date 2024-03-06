@@ -1,0 +1,2 @@
+rootProject.name='DevOps4u'
+include ':app'

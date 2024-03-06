@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756854664142",
+    "project_id": "devops4u-721ec",
+    "storage_bucket": "devops4u-721ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756854664142:android:48fc632de863d7fb2fd99f",
+        "android_client_info": {
+          "package_name": "com.leanderchristmann.devops4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756854664142-cmm2ermqbcs8jvag45bkm1nca9rtvfjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdflkvV9yc0VUOpKYJt76ER507m8DXxPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756854664142-cmm2ermqbcs8jvag45bkm1nca9rtvfjk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FCF7F8</color>
+    <color name="colorPrimaryDark">#6125BB</color>
+    <color name="colorSecondary">#FCF7F8</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="backgroundColor">#FCF7F8</color>
+    <color name="mainPurple">#6D25DA</color>
+    <color name="foregroundColor">#2E2E2E</color>
+    <color name="dividerColor">#AEAEAE</color>
+    <color name="fixedWhite">#FCF7F8</color>
+    <color name="LaunchingJet">#2E2E2E</color>
+</resources>

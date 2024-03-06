@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FavoritesQuoteActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/mainPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/upButtonFavoritesQuote"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/mainPurple"
+            android:contentDescription="@string/up_button_content_description"
+            android:onClick="onUpButtonClickFavoritesQuote"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/x53_arrow_snow" />
+
+        <ImageView
+            android:id="@+id/favoriteCategoryIconImageView"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/favorite_quote_icon_content_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/favoriteBodyLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        android:background="@color/backgroundColor">
+
+        <TextView
+            android:id="@+id/favoriteQuoteTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/default_quote"
+            android:textAlignment="center"
+            android:textColor="@color/foregroundColor"
+            app:layout_constraintBottom_toTopOf="@+id/favoriteAuthorTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/favoriteAuthorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="serif"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/default_author"
+            android:textAlignment="textEnd"
+            android:textColor="@color/foregroundColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/copyFavoriteQuoteButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/copyFavoriteQuoteButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/backgroundColor"
+            android:contentDescription="@string/copy_quote_button_content_description"
+            android:onClick="onFavoriteCopyButtonClick"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/x51_copy_snow" />
+
+        <ImageButton
+            android:id="@+id/randomNextFavoriteQuoteButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/backgroundColor"
+            android:contentDescription="@string/random_next_quote_button_content_description"
+            android:onClick="onRandomNextFavoriteQuoteButtonClick"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/x52_shuffle_snow" />
+
+        <ImageButton
+            android:id="@+id/removeFromFavoritesButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/backgroundColor"
+            android:contentDescription="@string/trash_icon_content_description"
+            android:onClick="onRemoveFavoriteQuoteClick"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/x55_trash_snow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
